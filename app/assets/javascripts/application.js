@@ -10,7 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
+
+//= require jquery-2.1.1
+//= require respond.min.js
+//= require bootstrap.min
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
