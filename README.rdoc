@@ -26,3 +26,4 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+[ ![Codeship Status for nilDevo/appu](https://codeship.io/projects/56c59ad0-231c-0132-6f39-3e39b625be42/status)](https://codeship.io/projects/36638)
