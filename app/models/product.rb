@@ -8,7 +8,4 @@ validates :image_name, :attachment_presence => true
 
   # Validate filename
   #validates_attachment_file_name :image_name, :matches => [/png\Z/, /jpe?g\Z/]
-
-
-
 end
