@@ -1,8 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <%= @product.ad_title %> <br />
-<%= image_tag @product.image_name.url %>
-Hello <br />
+
 <% if @product.image_name? %>
 <%= image_tag @product.image_name.url %>
 Hello
