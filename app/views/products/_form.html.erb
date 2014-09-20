@@ -10,10 +10,41 @@
       </ul>
     </div>
   <% end %>
-<%= f.label(:ad_title, "Title") %>
-<%= f.text_field(:ad_title) %>
-<%= f.label(:image_name) %>
-<%= f.file_field(:image_name) %>
+<table summary="Create New Ad">
+    <tr>
+    <th><%= f.label(:ad_title, "Title") %></th>
+    <td><%= f.text_field(:ad_title) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:rent_type) %></th>
+    <td><%= f.text_field(:rent_type) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:prise) %></th>
+    <td><%= f.text_field(:prise) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:area) %></th>
+    <td><%= f.text_field(:area) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:owner_type) %></th>
+    <td><%= f.text_field(:owner_type) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:condition) %></th>
+    <td><%= f.text_field(:condition) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:extra) %></th>
+    <td><%= f.text_field(:extra) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:image_name) %></th>
+    <td><%= f.file_field(:image_name) %></td>
+  </tr>
+  
+</table>
   <div class="actions">
     <%= f.submit %>
   </div>
