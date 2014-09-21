@@ -24,8 +24,8 @@ th{
 	margin: 1% 0 0 0 ;
 	float: left;
 }
-tr{
-	//border: 1px solid;
+td:hover {
+	background: #FFCC00;
 }
 .headertable{
 	float: right;
@@ -39,6 +39,9 @@ a.post{
 	font-weight: bold;
 	font-size: 20px;
 	
+}
+a:hover {
+	background: none;
 }
 .register{
 	font-size: 15px;
@@ -63,9 +66,10 @@ a.post{
 //	border: thin solid #12D49B;
 //	border-radius: 10px;
 }
-.ad_table {
-//	border: thin solid #12D49B;
-//	border-radius: 10px;
+.ad_table:hover {
+	border: 2px solid #FF9900;
+	border-radius: 10px;
+	background: #FFEB99;
 }
 .header{
 	height: 85px;
@@ -108,7 +112,7 @@ a.post{
 }
 
 .adDetails > tbody >tr >td:hover {
-	background-color: #f5f5f5;
+	background-color: #99CC66;
 }
 .extraf {
 	margin: 3% 0 0 0%;

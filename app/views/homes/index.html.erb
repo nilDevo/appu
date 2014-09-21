@@ -37,6 +37,8 @@
 	<%= pluralize(@productcount,'product') %>  found 
 	</div>
 	 <% @products.each do |f| %>
+	 <!-- Start AdContent -->
 		<%= render(:partial => "adContent", :locals => {:f => f}) %>
+	<!-- end AdContent -->
 	<% end %>
 </div>
