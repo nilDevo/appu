@@ -1,6 +1,6 @@
 <div class="row  ad_table">
 	<div class="col-lg-3 col-md-4 col-md-4 adimg">
-			<%= image_tag("homebg.jpg" ,:class => "adimgsize" )  %>
+			<%= image_tag("homebg.jpg" ,:class => "adimgsize img-responsive img-rounded" )  %>
 			
 			<div class="row extraf">
 					<button type="button" class="btn btn-success">	
@@ -10,7 +10,7 @@
 		  				<%= image_tag("share.png ",:size => '20x20' )  %>
 					</button>
 					<button type="button" class="btn btn-success">
-						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="evenmore">
+						<a data-toggle="collapse" data-parent="#accordion" href="#<%= f.id %>" id="evenmore">
 		  				<%= image_tag("collapse_up.png",:size => '20x20')  %>
 		  				</a>
 					</button>
@@ -36,7 +36,7 @@
 								<td><%= f.extra %></td>
 							</tr>
 						</table>
-					<div id="collapseOne" class="panel-collapse collapse in">
+					<div id="<%= f.id  %>" class="panel-collapse collapse in">
       					<div class="panel-body">
       					<table class="adDetails adDetails1 ">
 							<tr>
@@ -50,7 +50,7 @@
 							
 						</table>
 					</div>
-					</div>
+				</div>
 					
       					  					    
 			</div>
