@@ -1,0 +1,70 @@
+<div class="row  ad_table">
+	<div class="col-lg-3 col-md-4 col-md-4 adimg">
+			<%= image_tag("homebg.jpg" ,:class => "adimgsize" )  %>
+			
+			<div class="row extraf">
+					<button type="button" class="btn btn-success">	
+       					<%= image_tag("email.png" ,:size => '20x20', )  %>
+        			</button>
+					<button type="button" class="btn btn-success">
+		  				<%= image_tag("share.png ",:size => '20x20' )  %>
+					</button>
+					<button type="button" class="btn btn-success">
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" id="evenmore">
+		  				<%= image_tag("collapse_up.png",:size => '20x20')  %>
+		  				</a>
+					</button>
+			</div>
+	</div>
+	<div class="col-lg-9 col-md-8">
+		<h3 class="adtitle"><%= f.ad_title %>	
+		</h3>
+
+		<div class="row">
+			<div class="table-responsive">
+						<table class="adDetails ">
+							<tr>
+								<td><%= f.rent_type %></td>
+								<td><%= f.prise %></td>
+							</tr>
+							<tr>
+								<td><%= f.area %></td>
+								<td><%= f.owner_type %></td>
+							</tr>
+							<tr>
+								<td><%= f.condition %></td>
+								<td><%= f.extra %></td>
+							</tr>
+						</table>
+					<div id="collapseOne" class="panel-collapse collapse in">
+      					<div class="panel-body">
+      					<table class="adDetails adDetails1 ">
+							<tr>
+								<td>
+						 		<%= link_to("Full Ad", {:controller =>'products' ,:action => 'show' , :id => f.id }, :class => "acton show") %>
+						 		</td>
+						 		<td>
+						 		<%= link_to("edit", {:controller =>'products' ,:action => 'edit' , :id => f.id }, :class => "acton show") %>
+						 		</td>
+							</tr>
+							
+						</table>
+					</div>
+					</div>
+					
+      					  					    
+			</div>
+		</div>
+		
+	</div>
+
+</div>
+<script type="text/javascript">
+$(function(){
+	$('#evenmore').collapse('hide');
+});
+$('#evenmore').on('shown.bs.collapse', function () {
+  $('#evenmore').tab('hide');
+})
+
+</script>

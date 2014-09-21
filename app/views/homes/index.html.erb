@@ -1,0 +1,42 @@
+<% @page_title = "Test v1.0" %>
+
+<div class="container-fluid homeindex">
+<header class="row header">
+	<div class="col-lg-6 col-sm-5 col-xs-8 clearfix ">
+		<%= image_tag("logo1.png", :class => 'logo') %>
+	</div>
+	<div class="col-lg-6 col-sm-5 col-xs-4 headerdiv">
+		<table summury="login" class="headertable">
+			<tr>
+				<td>
+					<%= link_to("Login", {:controller =>'products' ,:action => 'new'}, :class => "login") %> 
+				</td>
+				<td>&nbsp</td>
+				<td>
+					
+					<%= link_to("Register", {:controller =>'products' ,:action => 'new'}, :class => "register") %> &nbsp 
+				</td>
+				<td >
+					<span class="btn btn-warning btn-block" >
+					<%= link_to("Post Ad", {:controller =>'products' ,:action => 'new'}, :class => "post") %></span>
+				</td>
+
+			</tr>
+		</table>
+	</div>
+</header>
+<div class="row adjust">
+</div>
+
+<div class="col-lg-2 col-sm-3 filter hidden-xs">
+	<%= render(:partial => "filter") %>
+</div>
+
+<div class="col-lg-6 col-sm-5 adcontent">
+	<div class="row">
+	<%= pluralize(@productcount,'product') %>  found 
+	</div>
+	 <% @products.each do |f| %>
+		<%= render(:partial => "adContent", :locals => {:f => f}) %>
+	<% end %>
+</div>

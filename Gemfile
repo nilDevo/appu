@@ -40,3 +40,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
 gem "paperclip", "~> 4.2"
+
