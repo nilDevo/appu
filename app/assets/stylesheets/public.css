@@ -122,3 +122,13 @@ a:hover {
 	background: #339900;
 	border-radius: 5px;
 }
+.search-nav-1 {
+	margin-top: 5px;
+}
+.search-nav-2 {
+	border-radius: 20px;
+	margin-top: 11%;
+}
+.search-icon {
+	float: right;
+}
