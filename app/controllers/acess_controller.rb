@@ -23,7 +23,7 @@ class AcessController < ApplicationController
       redirect_to(:action => 'index')
     else
       flash[:notice] = "Invalid username/password combination."
-      redirect_to(:controller =>'acess', :action => 'login')
+      redirect_to(:controller =>'homes', :action => 'index')
     end
   end
 

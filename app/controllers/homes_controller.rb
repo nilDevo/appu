@@ -8,6 +8,7 @@ class HomesController < ApplicationController
     @homes = Home.all
     @products = Product.all
     @productcount = Product.count
+    @search
   end
 
   # GET /homes/1

@@ -8,6 +8,7 @@
 
 	<div class="col-lg-3 col-sm-4 search-nav-1">
 		 <div class="form-control search-nav-2">
+		 	
 			<%= image_tag("search.png", :class => 'search-icon',:size => '20x20') %>
 			
 
@@ -17,7 +18,7 @@
 		<table summury="login" class="headertable">
 			<tr>
 				<td>
-					<%= link_to("Login", {:controller =>'acess' ,:action => 'login'}, :class => "login") %> 
+					<a href="#myModal" data-toggle="modal" data-target="#myModal">Login </a>
 				</td>
 				<td>&nbsp</td>
 				<td>
@@ -33,6 +34,51 @@
 		</table>
 	</div>
 </header>
+
+
+
+<!-- Modal for login -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="loginModal">Login</h4>
+      </div>
+      <div class="modal-body">
+			
+			  <%= form_tag(:controller => 'acess' , :action => 'attempt_login') do %>
+			  <table class="table">
+			    <tr>
+			      <td><%= label_tag(:username) %></td>
+			      <td><%= text_field_tag(:username) %></td>
+			    </tr>
+			    <tr>
+			      <td><%= label_tag(:password) %></td>
+			      <td><%= password_field_tag(:password) %></td>
+			    </tr>
+			    <tr>
+			      <td>&nbsp;</td>
+			      <td></td>
+			    </tr>
+			  </table>
+			 	<div class="modal-footer">
+			        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+			        <%= submit_tag("Log In") %>
+			        
+			     </div>
+			 <% end %>
+
+      </div>
+      
+
+    </div>
+  </div>
+</div>
+
+<!-- Modal Login finish -->
+
+
 <div class="row adjust">
 </div>
 

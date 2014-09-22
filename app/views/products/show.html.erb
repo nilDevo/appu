@@ -2,6 +2,48 @@
 
 <%= @product.ad_title %> <br />
 
+<button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Click ME
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <h4 class="modal-title" id="myModalLabel">Login</h4>
+      </div>
+      <div class="modal-body">
+			<div class="login">
+			  <%= form_tag(:controller => 'acess' , :action => 'attempt_login') do %>
+			  <table class="table">
+			    <tr>
+			      <td><%= label_tag(:username) %></td>
+			      <td><%= text_field_tag(:username) %></td>
+			    </tr>
+			    <tr>
+			      <td><%= label_tag(:password) %></td>
+			      <td><%= password_field_tag(:password) %></td>
+			    </tr>
+			    <tr>
+			      <td>&nbsp;</td>
+			      <td><%= submit_tag("Log In") %></td>
+			    </tr>
+			  </table>
+			  <% end %>
+			</div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Login</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
