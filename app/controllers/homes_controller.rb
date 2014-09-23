@@ -6,7 +6,7 @@ class HomesController < ApplicationController
  
   def index
     @homes = Home.all
-    @products = Product.all
+    @products = Product.all.paginate(page: params[:page], per_page: 3)
     @productcount = Product.count
     @search
   end

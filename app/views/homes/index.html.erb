@@ -48,15 +48,19 @@
       <div class="modal-body">
 			
 			  <%= form_tag(:controller => 'acess' , :action => 'attempt_login') do %>
-			  <table class="table">
+			  <table class="">
 			    <tr>
-			      <td><%= label_tag(:username) %></td>
-			      <td><%= text_field_tag(:username) %></td>
-			    </tr>
-			    <tr>
-			      <td><%= label_tag(:password) %></td>
-			      <td><%= password_field_tag(:password) %></td>
-			    </tr>
+		    <div class="form-group">
+			    <%= label_tag(:username) %>
+			      <%= text_field_tag(:username) %>
+			   
+			</div>
+			<div class="form-group">
+			    
+			      <%= label_tag(:password) %>
+			      <%= password_field_tag(:password) %>
+			    
+			</div>
 			    <tr>
 			      <td>&nbsp;</td>
 			      <td></td>
@@ -64,7 +68,7 @@
 			  </table>
 			 	<div class="modal-footer">
 			        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-			        <%= submit_tag("Log In") %>
+			        <%= submit_tag 'Submit', class: 'btn btn-success' %>
 			        
 			     </div>
 			 <% end %>
@@ -90,9 +94,11 @@
 	<div class="row">
 	<%= pluralize(@productcount,'product') %>  found 
 	</div>
+<%= will_paginate @products %>
 	 <% @products.each do |f| %>
 	 <!-- Start AdContent -->
 		<%= render(:partial => "adContent", :locals => {:f => f}) %>
 	<!-- end AdContent -->
 	<% end %>
+<%= will_paginate @products %>
 </div>

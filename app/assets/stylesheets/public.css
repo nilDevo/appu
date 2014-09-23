@@ -25,7 +25,7 @@ th{
 	float: left;
 }
 td:hover {
-	background: #FFCC00;
+	//background: #FFCC00;
 }
 .headertable{
 	float: right;
