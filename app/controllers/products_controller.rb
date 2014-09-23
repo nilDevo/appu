@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
+  
+  before_action :confirm_logged_in ,:except => [:index ,:show]
   before_action :set_product, only: [:show, :edit, :update, :destroy]
-
   # GET /products
   # GET /products.json
   def index
@@ -72,4 +73,6 @@ class ProductsController < ApplicationController
       params.require(:product).permit(:ad_title, :rent_type, :prise, :area, 
         :owner_type, :condition, :extra, :image_name)
     end
-end
+
+
+ end

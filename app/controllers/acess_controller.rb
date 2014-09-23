@@ -35,13 +35,5 @@ class AcessController < ApplicationController
   end
 
 
-  private 
-  def confirm_logged_in
-  	unless session[:user_id]
-  		redirect_to(:action => 'login')
-  		return false
-  	else
-  		return true
-  	end
-  end
+  
 end
