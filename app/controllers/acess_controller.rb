@@ -8,6 +8,19 @@ class AcessController < ApplicationController
   def login
   end
 
+  def new
+    @user = User.new
+  end
+
+  def create
+    
+  end
+
+  def show
+    @product = Product.find(params[:id])
+  end
+
+
   def attempt_login
   	if params[:username].present? && params[:password].present?
       found_user = User.where(:user_name => params[:username]).first
@@ -34,6 +47,11 @@ class AcessController < ApplicationController
     redirect_to(:controller =>'homes', :action => 'index')
   end
 
+
+
+
+
+ 
 
   
 end

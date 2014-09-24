@@ -11,11 +11,35 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :password_digest %><br>
-    <%= f.text_field :password_digest %>
-  </div>
+<table summary="Create user" class="table">
+    <tr>
+    <th><%= f.label(:first_name, "first name") %></th>
+    <td><%= f.text_field(:first_name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:last_name) %></th>
+    <td><%= f.text_field(:last_name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:user_name, "user name") %></th>
+    <td><%= f.text_field(:user_name) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:email) %></th>
+    <td><%= f.text_field(:email) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:password_digest, "password") %></th>
+    <td><%= f.password_field(:password) %></td>
+  </tr>
+  <tr>
+    <th><%= f.label(:password_digest, "re-enter password") %></th>
+    <td><%= f.password_field(:password_confirmation) %></td>
+  </tr>
+</table>
   <div class="actions">
     <%= f.submit %>
   </div>
+
+  
 <% end %>
