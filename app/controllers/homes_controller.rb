@@ -8,7 +8,11 @@ class HomesController < ApplicationController
     @homes = Home.all
     @products = Product.all.paginate(page: params[:page], per_page: 3)
     @productcount = Product.count
-    @search
+    if  session[:user_id].present?
+      @login = 'Logout'
+    else
+      @login = 'Login'
+    end 
   end
 
   # GET /homes/1
