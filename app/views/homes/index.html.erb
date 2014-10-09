@@ -26,10 +26,10 @@
 				</td>
 				<td>&nbsp</td>
 				<% unless  session[:user_id].present? %>
-				<td>
-					
-					<%= link_to("Register", {:controller =>'users' ,:action => 'new'}, :class => "register") %> &nbsp 
-				</td>
+						<td>
+							
+							<%= link_to("Register", {:controller =>'users' ,:action => 'new'}, :class => "register", :id => "register") %> &nbsp 
+						</td>
 				<% end %>
 				<td >
 					<span class="btn btn-warning btn-block" >
@@ -41,53 +41,7 @@
 	</div>
 </header>
 
-
-
-<!-- Modal for login -->
-<div class="modal fade" id="login_modal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <h4 class="modal-title" id="loginModal">Login</h4>
-      </div>
-      <div class="modal-body">
-			
-			  <%= form_tag(:controller => 'acess' , :action => 'attempt_login') do %>
-			  <table class="">
-			    <tr>
-		    <div class="form-group">
-			    <%= label_tag(:username) %>
-			      <%= text_field_tag(:username) %>
-			   
-			</div>
-			<div class="form-group">
-			    
-			      <%= label_tag(:password) %>
-			      <%= password_field_tag(:password) %>
-			    
-			</div>
-			    <tr>
-			      <td>&nbsp;</td>
-			      <td></td>
-			    </tr>
-			  </table>
-			 	<div class="modal-footer">
-			        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
-			        <%= submit_tag 'Login', class: 'btn btn-success' %>
-			        
-			     </div>
-			 <% end %>
-
-      </div>
-      
-
-    </div>
-  </div>
-</div>
-
-<!-- Modal Login finish -->
-
+		<%= render(:partial => "login_modal") %>
 
 <div class="row adjust">
 </div>
@@ -99,6 +53,7 @@
 <div class="col-lg-6 col-sm-5 adcontent">
 	<div class="row">
 	<%= pluralize(@productcount,'product') %>  found 
+	<p id="demo"></p>
 	</div>
 <%= will_paginate @products %>
 	 <% @products.each do |f| %>

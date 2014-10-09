@@ -8,11 +8,6 @@ class HomesController < ApplicationController
     @homes = Home.all
     @products = Product.all.paginate(page: params[:page], per_page: 3)
     @productcount = Product.count
-    if  session[:user_id].present?
-      @login = 'Logout'
-    else
-      @login = 'Login'
-    end 
   end
 
   # GET /homes/1
@@ -53,7 +48,7 @@ class HomesController < ApplicationController
      @product = Product.find(params[:id])
     if @product.update_attributes(product_params)
       flash[:notice] = "Ad updated successfully."
-      redirect_to(:action => 'index')
+      redirect_to(:action => 'index', status: 301)
     else
       render('edit')
     end
