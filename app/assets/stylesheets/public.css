@@ -97,6 +97,13 @@ a:hover {
 .adimgsize {
 	height: 80%;
 	width: 80%;
+	border: thin solid #12D49B;
+	border-radius: 10px;
+}
+.ad_table:hover .adimgsize {
+	height: 80%;
+	width: 80%;
+	border: none;
 }
 .adtitle {
 	font :;
