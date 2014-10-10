@@ -1,0 +1,39 @@
+<header class="row header">
+	<div class="col-lg-5 col-sm-5  clearfix ">
+		<%= image_tag("logo1.png", :class => 'logo img-responsive') %>
+	</div>
+
+	<div class="col-lg-3 col-sm-4 search-nav-1">
+		 <div class="form-control search-nav-2">
+		 	
+			<%= image_tag("search.png", :class => 'search-icon',:size => '20x20') %>
+			
+
+         </div>
+    </div>
+	<div class="col-lg-4 col-sm-3 headerdiv">
+		<table summury="login" class="headertable">
+			<tr>
+				<td>
+					<% if  session[:user_id].present? %>
+   						<%= link_to 'Logout' , :controller =>'acess' , :action => 'logout' %>
+    				<% else %>
+      					<a href="#login_modal" data-toggle="modal" data-target="#login_modal" id="login">Login</a>
+      				<% end %>
+				</td>
+				<td>&nbsp</td>
+				<% unless  session[:user_id].present? %>
+						<td>
+							
+							<%= link_to("Register", {:controller =>'users' ,:action => 'new'}, :class => "register", :id => "register") %> &nbsp 
+						</td>
+				<% end %>
+				<td >
+					<span class="btn btn-warning btn-block" >
+					<%= link_to("Post Ad", {:controller =>'products' ,:action => 'new'}, :class => "post") %></span>
+				</td>
+
+			</tr>
+		</table>
+	</div>
+</header>
