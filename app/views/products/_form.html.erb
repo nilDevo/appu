@@ -17,7 +17,7 @@
   </tr>
   <tr>
     <th><%= f.label(:rent_type) %></th>
-    <td><%= f.text_field(:rent_type) %></td>
+    <td><%= f.select :rent_type, [['Rent','Rent'],['Sharing','Sharing']] %></td>
   </tr>
   <tr>
     <th><%= f.label(:prise) %></th>
@@ -29,11 +29,11 @@
   </tr>
   <tr>
     <th><%= f.label(:owner_type) %></th>
-    <td><%= f.text_field(:owner_type) %></td>
+    <td><%= f.select :owner_type, [['Owner','Owner'],['Broker','Broker']] %></td>
   </tr>
   <tr>
     <th><%= f.label(:condition) %></th>
-    <td><%= f.text_field(:condition) %></td>
+    <td><%= f.select :condition ,[['Furnished','Furnished'],['Semi Furnished','Semi Furnished'],['Empty','Empty']] %></td>
   </tr>
   <tr>
     <th><%= f.label(:extra) %></th>
