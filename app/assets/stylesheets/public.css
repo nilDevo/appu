@@ -1,13 +1,12 @@
 body{
-//	
 	background-position: center; 
-	
 }
+/*
 .homeindex{
 	background: url('/assets/homebg4.jpg') no-repeat 0 0 ;
-//	height : 2000px;
+    height : 2000px;
 	background-position: 100% 80%;
-}
+}*/
 /* for post ad   */
 .next{
 	height :42px;
@@ -67,7 +66,7 @@ a:hover {
 //	border-radius: 10px;
 }
 .ad_table:hover {
-	border: 2px solid #FF9900;
+	border: 1px solid #FF9900;
 	border-radius: 10px;
 	background: #FFEB99;
 }
@@ -95,14 +94,14 @@ a:hover {
 	//height: 50%;
 }
 .adimgsize {
-//	height: 80%;
-//	width: 80%;
+	height: 120px;
+	width: 150px;
 	border: thin solid #12D49B;
 	border-radius: 10px;
 }
+
 .ad_table:hover .adimgsize {
-	height: 80%;
-	width: 80%;
+	
 	border: none;
 }
 .adtitle {
