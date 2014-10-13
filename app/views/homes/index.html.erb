@@ -1,25 +1,26 @@
 <% @page_title = "Test v1.0" %>
 
 <%= render(:partial => "header") %>
-<%= render(:partial => "login_modal") %>
-
 <div class="row adjust">
 </div>
+<%= render(:partial => "login_modal") %>
 
 <div class="col-lg-2 col-sm-3 filter hidden-xs">
 	<%= render(:partial => "filter") %>
 </div>
 
 <div class="col-lg-6 col-sm-5 adcontent">
-	<div class="row">
-	<%= pluralize(@productcount,'product') %>  found 
-	<p id="demo"></p>
-	</div>
+	
 <%= will_paginate @products %>
+<div class="row pluralizeProduct">
+	<%= pluralize(@productcount,'product') %>  found 
+	</div>
 	 <% @products.each do |f| %>
 	 <!-- Start AdContent -->
 		<%= render(:partial => "adContent", :locals => {:f => f}) %>
 	<!-- end AdContent -->
 	<% end %>
 <%= will_paginate @products %>
+<script>
 
+</script>

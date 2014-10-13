@@ -1,17 +1,17 @@
 <div class="row  ad_table">
 	<div class="col-lg-3 col-md-4 col-md-4 adimg">
-			<%= image_tag(f.image_name.url(:medium) ,:class => "adimgsize img-responsive img-rounded" )  %>
+			<%= image_tag(f.image_name.url ,:class => "adimgsize img-responsive img-rounded" )  %>
 			
 			<div class="row extraf">
 					<span>
-       					<%= image_tag("email.png" ,:size => '30x30', :class => 'extrag' )  %>
+       					<%= image_tag("email.png" ,:size => '15x15', :class => 'extrag' )  %>
         			</span>	
 					<span>
-		  				<%= image_tag("share.png ",:size => '30x30', :class => 'extrag' )  %>
+		  				<%= image_tag("share.png ",:size => '15x15', :class => 'extrag' )  %>
 					</span>
 					<span>
 						<a data-toggle="collapse" data-parent="#accordion" href="#<%= f.id %>" id="evenmore">
-		  				<%= image_tag("collapse_up.png",:size => '30x30', class:  'extrag', id: 'collapseMe')  %>
+		  				<%= image_tag("collapse_up.png",:size => '15x15', class:  'extrag', id: 'collapseMe')  %>
 		  				</a>
 					</span>
 			</div>

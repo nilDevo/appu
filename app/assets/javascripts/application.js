@@ -11,8 +11,8 @@
 // about supported directives.
 //
 
-//=require public.js
-//= require jquery-2.1.1
+//= require public.js
+//= require jquery-1.11.1.min.js
 //= require respond.min.js
 //= require bootstrap.min
 //= require jquery_ujs
