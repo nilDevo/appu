@@ -79,7 +79,7 @@ a:hover {
 //	background-color: #3EC4ED;
 }
 .adjust {
-	height: 20px;
+	min-height: 20px;
 }
 
 .logo{
@@ -98,7 +98,7 @@ a:hover {
 	width: 150px;
 	border: thin solid #12D49B;
 	border-radius: 10px;
-	margin-top: -10%;
+//	margin-top: -10%;
 }
 
 .ad_table:hover .adimgsize {
@@ -124,7 +124,7 @@ a:hover {
 }
 .extraf {
 	margin: 0% 10% 2% 0%;
-	float: right;
+//	float: right;
 }
 .extrag {
 	background: #95C60B;
