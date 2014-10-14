@@ -90,11 +90,11 @@ a:hover {
 //	border-radius: 10px;
 }
 .adimg {
-	padding: 3% 0 0 0;
+	padding: 0% 0 0 0;
 	//height: 50%;
 }
 .adimgsize {
-	height: 120px;
+	height: 125px;
 	width: 150px;
 	border: thin solid #12D49B;
 	border-radius: 10px;
@@ -123,7 +123,7 @@ a:hover {
 	background-color: #99CC66;
 }
 .extraf {
-	margin: 0% 10% 2% 0%;
+	margin: 0% 10% 3% 0%;
 //	float: right;
 }
 .extrag {
