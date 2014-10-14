@@ -15,17 +15,18 @@
 		<table summury="login" class="headertable">
 			<tr>
 				<td>
-					<% if  session[:user_id].present? %>
-   						<%= link_to 'Logout' , :controller =>'acess' , :action => 'logout' %>
+					<% if  user_signed_in? %>
+					    Hi, <%= current_user.email %>
+   						<%= link_to 'Logout' , destroy_user_session_path , :method => :delete%>
     				<% else %>
-      					<a href="#login_modal" data-toggle="modal" data-target="#login_modal" id="login">Login</a>
+      					<%= link_to 'Login' , new_user_session_path %>
       				<% end %>
 				</td>
 				<td>&nbsp</td>
-				<% unless  session[:user_id].present? %>
+				<% unless  user_signed_in?  %>
 						<td>
 							
-							<%= link_to("Register", {:controller =>'users' ,:action => 'new'}, :class => "register", :id => "register") %> &nbsp 
+							<%= link_to 'Register', new_user_registration_path , class: 'register', id: 'register' %> &nbsp 
 						</td>
 				<% end %>
 				<td >
