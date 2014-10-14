@@ -1,16 +1,13 @@
 Rails.application.routes.draw do
   
-  
-
-  
-
+  devise_for :users
   root "homes#index"
 
   resources :homes
 
   resources :products
 
-  resources :users
+  
 
   match ':controller(/:action(/:id))', :via => [:get,:post]
   
