@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-
+belongs_to :user
 has_attached_file :image_name, :styles => { :medium => "300x300>", :thumb => "100x100>" }, default_url: "homeDefault.png"
 validates_attachment_content_type :image_name, :content_type => /\Aimage\/.*\Z/
 #validates :image_name, :attachment_presence => true

@@ -50,3 +50,4 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 gem 'devise', '~> 3.4.0'
+gem 'cancancan', '~> 1.9'

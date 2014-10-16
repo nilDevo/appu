@@ -16,7 +16,8 @@
 			<tr>
 				<td>
 					<% if  user_signed_in? %>
-					    Hi, <%= current_user.email %>
+					    Hi, <%= current_user.first_name %>
+					    <%= link_to 'profile' , controller: 'user', action: 'profile'%>
    						<%= link_to 'Logout' , destroy_user_session_path , :method => :delete%>
     				<% else %>
       					<%= link_to 'Login' , new_user_session_path %>

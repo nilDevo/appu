@@ -1,6 +1,6 @@
 class ProductsController < ApplicationController
   
-  before_action :confirm_logged_in ,:except => [:index ,:show]
+  before_action :authenticate_user! , :except => [:index,:show]
   before_action :set_product, only: [:edit, :update, :destroy]
   # GET /products
   # GET /products.json
