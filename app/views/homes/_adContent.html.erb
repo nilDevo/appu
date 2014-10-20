@@ -44,7 +44,9 @@
 						 		<%= link_to("Full Ad", {:controller =>'products' ,:action => 'show' , :id => f.id }, :class => "acton show") %>
 						 		</td>
 						 		<td>
+						 		<% if can? :update , f %>
 						 		<%= link_to("edit", {:controller =>'products' ,:action => 'edit' , :id => f.id }, :class => "acton show") %>
+						 		<% end %>
 						 		</td>
 							</tr>
 							

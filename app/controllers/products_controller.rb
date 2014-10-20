@@ -1,5 +1,7 @@
 class ProductsController < ApplicationController
   
+  load_and_authorize_resource 
+
   before_action :authenticate_user! , :except => [:index,:show]
   before_action :set_product, only: [:edit, :update, :destroy]
   # GET /products
