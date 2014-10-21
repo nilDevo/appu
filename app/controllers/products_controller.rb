@@ -18,7 +18,8 @@ class ProductsController < ApplicationController
 
   # GET /products/new
   def new
-    @product = Product.new
+    @user_asso = current_user
+    @product =  @user_asso.products.new
   end
 
   # GET /products/1/edit
@@ -28,7 +29,8 @@ class ProductsController < ApplicationController
   # POST /products
   # POST /products.json
   def create
-    @product = Product.new(product_params)
+    @user_asso = current_user
+    @product = @user_asso.products.new(product_params)
 
       if @product.save
         redirect_to @product, notice: 'Product was successfully created.' 
