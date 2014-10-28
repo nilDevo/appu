@@ -2,8 +2,8 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :create , Product
-    can [:update,:read,:destroy ], Product do |product|
+    can [:create ,:read] , Product
+    can [:update,:destroy ], Product do |product|
         product.try(:user) == user
   end
     # Define abilities for the passed in user here. For example:

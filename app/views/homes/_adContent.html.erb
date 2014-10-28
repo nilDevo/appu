@@ -48,6 +48,11 @@
 						 		<%= link_to("edit", {:controller =>'products' ,:action => 'edit' , :id => f.id }, :class => "acton show") %>
 						 		<% end %>
 						 		</td>
+						 		<td>
+						 			<% if can? :destroy , f %>
+						 			<%= link_to 'Delete Ad', f, method: :delete, data: { confirm: 'Are you sure?' } %>
+						 			<% end %>
+						 		</td>
 							</tr>
 							
 						</table>
