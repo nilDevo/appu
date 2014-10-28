@@ -3,7 +3,7 @@ class Ability
 
   def initialize(user)
     can :create , Product
-    can [:update,:read ], Product do |product|
+    can [:update,:read,:destroy ], Product do |product|
         product.try(:user) == user
   end
     # Define abilities for the passed in user here. For example:
