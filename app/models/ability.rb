@@ -2,10 +2,11 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can [:create ,:read] , Product
+    can [:create,:read,:update] , User , :email => user.email
+    cannot :index , User
     can [:update,:destroy ], Product do |product|
         product.try(:user) == user
-  end
+    end
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)

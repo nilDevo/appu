@@ -17,7 +17,9 @@
 				<td>
 					<% if  user_signed_in? %>
 					    Hi, <%= current_user.first_name %>
-					    <%= link_to 'profile' , edit_user_registration_path %>
+					    <% if can? :update , current_user %>
+					    <%= link_to 'profile' , current_user %>
+					    <% end %>
    						<%= link_to 'Logout' , destroy_user_session_path , :method => :delete%>
     				<% else %>
       					<%= link_to 'Login' , new_user_session_path %>
